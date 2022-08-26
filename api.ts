@@ -2967,40 +2967,15 @@ export type ConfigValueUpdateFilter = typeof ConfigValueUpdateFilter[keyof typeo
 /**
  * 
  * @export
- * @interface Configuration
- */
-export interface Configuration {
-    /**
-     * 
-     * @type {ConfigValueFilter}
-     * @memberof Configuration
-     */
-    'title': ConfigValueFilter;
-    /**
-     * 
-     * @type {PolymorphicProperty}
-     * @memberof Configuration
-     */
-    'value': PolymorphicProperty;
-    /**
-     * If this config variable can be edited by the user
-     * @type {boolean}
-     * @memberof Configuration
-     */
-    'editable': boolean;
-}
-/**
- * 
- * @export
  * @interface ConfigurationSingle
  */
 export interface ConfigurationSingle {
     /**
      * 
-     * @type {Configuration}
+     * @type {FireflyConfiguration}
      * @memberof ConfigurationSingle
      */
-    'data': Configuration;
+    'data': FireflyConfiguration;
 }
 /**
  * 
@@ -3338,6 +3313,31 @@ export const ExportFileFilter = {
 export type ExportFileFilter = typeof ExportFileFilter[keyof typeof ExportFileFilter];
 
 
+/**
+ * 
+ * @export
+ * @interface FireflyConfiguration
+ */
+export interface FireflyConfiguration {
+    /**
+     * 
+     * @type {ConfigValueFilter}
+     * @memberof FireflyConfiguration
+     */
+    'title': ConfigValueFilter;
+    /**
+     * 
+     * @type {PolymorphicProperty}
+     * @memberof FireflyConfiguration
+     */
+    'value': PolymorphicProperty;
+    /**
+     * If this config variable can be edited by the user
+     * @type {boolean}
+     * @memberof FireflyConfiguration
+     */
+    'editable': boolean;
+}
 /**
  * 
  * @export
@@ -14665,7 +14665,7 @@ export const ConfigurationApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getConfiguration(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Configuration>>> {
+        async getConfiguration(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<FireflyConfiguration>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getConfiguration(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -14708,7 +14708,7 @@ export const ConfigurationApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getConfiguration(options?: any): AxiosPromise<Array<Configuration>> {
+        getConfiguration(options?: any): AxiosPromise<Array<FireflyConfiguration>> {
             return localVarFp.getConfiguration(options).then((request) => request(axios, basePath));
         },
         /**
