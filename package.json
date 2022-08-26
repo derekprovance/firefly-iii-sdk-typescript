@@ -1,6 +1,6 @@
 {
   "name": "firefly-iii-sdk-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenAPI Generated SDK for Firefly III",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,8 +15,7 @@
     "url": "git+ssh://git@github.com/derekprovance/firefly-iii-sdk-typescript.git"
   },
   "keywords": [
-    "Firefly",
-    "III"
+    "Firefly III"
   ],
   "author": "",
   "license": "ISC",
