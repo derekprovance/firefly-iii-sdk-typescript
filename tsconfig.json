@@ -6,7 +6,10 @@
         "esModuleInterop": true,
         "inlineSourceMap": false,
         "lib": [
-            "esnext"
+            "es2017"
+        ],
+        "types": [
+            "node"
         ],
         "listEmittedFiles": false,
         "listFiles": false,
@@ -17,10 +20,9 @@
         "skipLibCheck": true,
         "strict": true,
         "traceResolution": false,
-        "types": [],
         "module": "commonjs",
         "outDir": "dist",
-        "target": "es2015"
+        "target": "es2017"
     },
     "compileOnSave": false,
     "exclude": [
